@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "font-reg";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf)
+}
+@font-face {
+    font-family: "font-bold";
+    src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+
+body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px black solid;
+    width: 420px;
+    background: #e0dcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* .centered-element {
+    margin-top: 2px;
+} */
+h1 {
+    padding: 5%;
+    margin-left: 10%;
+}
+
+
+.app {
+    padding: 10%;
+    margin-left: 20%;
+}
+
+button {
+    color: #fff;
+    background: #009be5;
+    right: 41%;
+    border: 2px solid #000;
+    padding-inline: 40px;
+    margin-left: 25%;
+    border-radius: 56px;
+    
+     
+}
+button:hover {
+    background: #009be5;
+    border: 2px solid #000;
+    transform: scale(1.1);
+    transition: 0.4s;
+
+}
