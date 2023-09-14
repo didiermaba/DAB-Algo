@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+
+  <h1 align="center">Retrait DAB</h1>
+  <p align="center">Cliquez sur le bouton pour faire un retrait</p>
+  <button onclick="">retrait</button>
   
   <div class = "app"></div>
 
@@ -15,35 +19,58 @@
   const soldeClient = 1200;
   const soldeDab = 1200;
   const passCard = 9513;
-  let card = parseInt(prompt('Choisissez une carte'));
-
+  
   const app = document.querySelector(".app") 
-
+  
   // Functions
- /* Type de cartes de l'app:
+  /* Type de cartes de l'app:
   1. CB Valide 
   2. CB non Valide 
   3. CB bloquée
   */
-  function cardChecker(){
-    if (card === 2) {
-        app.innerText = "CB Non valide" 
-    } else if(card === 3) {
-      app.innerText = "CB bloquée" 
+ function cardChecker(){
+    let card = parseInt(prompt('Choisissez une carte'));
+
+    // if (typeof(card) !== "string" && (card <= 3 || card > 4)) {
+      if (card === 2 || card != 1){
+        if (card === 2) {
+              app.innerText = "CB bloquée"
+        } else { 
+          app.innerText = "CB Non valide" 
+        }
     } else {
         passChecker()
     };
-  };
-
-  function passChecker() {
-    app.innerText = "CB valide" 
   }
 
-  function amountChoice(){}
+  /* pr vérification du code de la CB :
+  - A l'aide d'1 boucle ns allons permettre 3 essais
+  - Si un des 3 essais est valide, on met le cpte de la boucle
+  - au max afin de l'arreter et on lance la fx pr choisir le montant à retirer
+
+  */
+  function passChecker() {
+    app.innerText = "CB valide" 
+    for (let index = 0; index < 3; index++) {  
+      let passPrompt = parseInt(prompt('Saisissez votre code'))
+      if (passPrompt === passCard) {
+        index = 3 // détermine le nbre de boucle
+        amountChoice()
+      }
+    }
+    
+  }
+
+  function amountChoice(){
+    app.innerText = "combien voulez-vous retirer ?";
+
+  1
+  }
 
 
 
   // App
+  cardChecker();
     </script>
 </body>
 </html>
