@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+  <div class = "app"></div>
+
+    <script>
+
+  // variables
+  const soldeClient = 1200;
+  const soldeDab = 1200;
+  const passCard = 9513;
+  let card = parseInt(prompt('Choisissez une carte'));
+
+  const app = document.querySelector(".app") 
+
+  // Functions
+ /* Type de cartes de l'app:
+  1. CB Valide 
+  2. CB non Valide 
+  3. CB bloquée
+  */
+  function cardChecker(){
+    if (card === 2) {
+        app.innerText = "CB Non valide" 
+    } else if(card === 3) {
+      app.innerText = "CB bloquée" 
+    } else {
+        passChecker()
+    };
+  };
+
+  function passChecker() {
+    app.innerText = "CB valide" 
+  }
+
+  function amountChoice(){}
+
+
+
+  // App
+    </script>
+</body>
+</html>

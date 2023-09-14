@@ -2,6 +2,7 @@
 
 Conception d'un algorithme de DAB , sous forme de pseudo-code.
 
+  
 ---
 
 ```text 
@@ -26,5 +27,28 @@ Le client tape un code
             le programme s'arrete
         Lancer la dmde du code de la carte 
     SINON
-        Le code est incorrect
+        Le code est correct
         Lancer la dmde 
+Le distributeur affiche un msg "demanadant de choisir un montant à retirer"
+Le client choisit un montant
+Le processus de vérification de solde du client est lancé 
+    SI le montant choisi > le solde || le montant > plafond 
+        Le retrait est refusé 
+        Le distributeur affiche un message   
+        Le DAB relance la dmde du montant à retirer      
+    SINON
+        Le retrait est autorisé 
+        Le processus de vérification de solde DAB est lancé
+            SI  le montant > le solde
+                Le retrait est refusé
+                Le distributeur affiche un message  
+                Le DAB relance la dmde du montant à retirer  
+            SINON
+                Le retrait est autorisé
+                Le DAB remet le montant choisi
+Le client recupere sa CB 
+Le client recupère l'argent du DAB
+Fin du programme
+```
+
+                 
