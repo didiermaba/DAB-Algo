@@ -72,6 +72,14 @@
 
   function amountChoice(){
     app.innerText = "combien voulez-vous retirer ?";
+    let amount = parseInt(prompt('Choisissez un montant : 20, 50, 100, 200, 500, 1000'))
+    if (amount > soldeClient) {
+      app.innerText = "Solde insuffisant"
+    } else {
+      if (amount > soldeDab) {
+        app.innerText = "Retrait de " + amount + "Euros"
+      }
+    }
 
   1
   }
